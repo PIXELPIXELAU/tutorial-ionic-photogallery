@@ -8,12 +8,12 @@ https://ionicframework.com/docs/vue/your-first-app
 
 ## To Do
 
-[ ] Download the repo
-[ ] Connect SourceTree
-[ ] Follow the above instructions in the README.md file
-[ ] Record your time and leave notes and comments in ClickUp
-[ ] Present your final product
-[ ] Retrospective
+- [ ] Download the repo
+- [ ] Connect SourceTree
+- [ ] Follow the above instructions in the README.md file
+- [ ] Record your time and leave notes and comments in ClickUp
+- [ ] Present your final product
+- [ ] Retrospective
 
 ## Setup
 
