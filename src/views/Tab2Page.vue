@@ -1,4 +1,4 @@
-z<template>
+<template>
   <ion-page>
     <ion-header> 
       <ion-toolbar>
