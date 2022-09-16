@@ -11,27 +11,35 @@
          <ion-icon :icon="camera"></ion-icon>
       </ion-fab-button>
       </ion-fab>
-    </ion-content>
-    <ion-content :fullscreen="true">
+      <ion-grid>
+    <ion-row>
+      <ion-col size="6" :key="photo" v-for="photo in photos">
+        <ion-img :src="photo.webviewPath"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Tab 2</ion-title>
         </ion-toolbar>
       </ion-header>
-      
       <!--ExploreContainer name="Tab 2 page" /-->
     </ion-content>
   </ion-page>
 </template>
 
+  
+
+
+
 <script lang="ts">
   import { camera, trash, close } from 'ionicons/icons';
   import { IonPage, IonHeader, IonFab, IonFabButton, IonIcon,
-           IonToolbar, IonTitle, IonContent, //IonGrid, IonRow,
+           IonToolbar, IonTitle, IonContent, IonGrid, IonRow,
            //IonCol, IonImg 
           } 
            from '@ionic/vue';
-  import { usePhotoGallery } from '@/composables/usePhotoGallery';
+  import { usePhotoGallery, UserPhoto } from '@/composables/usePhotoGallery';
   
   export default  {
     name: 'TabPage',
@@ -40,10 +48,10 @@
            //IonCol, IonImg 
           },
     setup() {
-      const { takePhoto } = usePhotoGallery();
+      const { photos, takePhoto } = usePhotoGallery();
   
       return {
-        takePhoto,
+        photos, takePhoto,
         camera, trash, close
       }
     }
