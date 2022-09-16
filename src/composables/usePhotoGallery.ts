@@ -6,6 +6,7 @@ import { Preferences } from '@capacitor/preferences';
 
 
 export function usePhotoGallery() {
+  
     const photos = ref<UserPhoto[]>([]);
 
     const takePhoto = async () => {
